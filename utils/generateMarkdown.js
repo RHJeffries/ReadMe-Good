@@ -6,18 +6,18 @@ function renderLicenseBadge(licence) {
   } 
   
    else if (licence === 'Apache') {
-    `![Licence](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+    return `![Licence](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
   } 
    
    else if (licence === 'Eclipse'){
-   `![Licence](https://img.shields.io/badge/License-EPL%201.0-red.svg)`;
+    return `![Licence](https://img.shields.io/badge/License-EPL%201.0-red.svg)`;
   }
   
    else if (licence === 'GNU') {
     return `![licence: GNU](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20v3.0-green)`;
   } 
   
-  else if (licence === "ISC License (ISC)") {
+  else if (licence === 'ISC') {
     return `![licence: ISC](https://img.shields.io/badge/License-ISC-blue.svg)`
   }
 
@@ -41,11 +41,11 @@ if (licence === 'None'){
   return '';
 }
 else if (licence === 'Apache') {
-  `[Apache licence](https://opensource.org/licenses/Apache-2.0)`;
+  return `[Apache licence](https://opensource.org/licenses/Apache-2.0)`;
 } 
  
  else if (licence === 'Eclipse'){
- `[Eclipse licence](https://opensource.org/licenses/EPL-1.0)`;
+  return `[Eclipse licence](https://opensource.org/licenses/EPL-1.0)`;
 }
 
  else if (licence === 'GNU') {
@@ -109,7 +109,7 @@ function generateMarkdown(data) {
   
   ## Questions:
   - Github: [${data.username}](https://github.com/${data.username})
-  - Email: ${data.email} `;
+  - Email: [${data.email}](mailto:${data.email}) `;
  
 }
 
