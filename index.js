@@ -140,16 +140,20 @@ const questions = () => {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+  fs.writeFile(fileName, data, (err) => {
+    if (err)
+        throw err;
+    console.log('Success! Information transferred to the README!')
+});
 }
-
+ 
 // TODO: Create a function to initialize app
-const init = () =>  {
+function init() {
   questions()
-     .then((answers) => fs.writeToFile('README.md', generateMarkdown(answers)))
-      .then(() => console.log('Successfully wrote to index.html'))
-      .catch((err) => console.error(err));
-};
+    .then((answers) => fs.writeToFile('README.md', generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote to index.html'))
+    .catch((err) => console.error(err));
+}
 
 // Function call to initialize app
 init();
