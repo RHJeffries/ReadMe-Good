@@ -150,8 +150,8 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
   questions()
-    .then((answers) => fs.writeToFile('README.md', generateMarkdown(answers)))
-    .then(() => console.log('Successfully wrote to index.html'))
+    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 }
 
