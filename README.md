@@ -25,7 +25,9 @@
   Further details about the licence can be found here [MIT licence](https://opensource.org/licenses/MIT)
   
   ## Contribution:
-  Contribution by Ryan Jeffries
+  Contribution by Ryan Jeffries.
+
+  Validation for prompts inspired by https://www.youtube.com/watch?v=2VUQABoFOqw
   
   ## Testing:
   The best test is through the command line.
